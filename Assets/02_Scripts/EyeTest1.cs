@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class RotateWithGaze : MonoBehaviour
+public class EyeTest1 : MonoBehaviour
 {
     public GameObject demoObject;
     public float forceAmount;
     public Material flatMaterial;
     public Material objectMaterial;
-    public GameObject VFX1;
+    //public GameObject VFX1;
     Rigidbody rb;
     MeshRenderer mr;
 
@@ -33,13 +35,13 @@ public class RotateWithGaze : MonoBehaviour
     public void RayHit()
     {
         rb.AddTorque(Vector3.up * forceAmount * Time.deltaTime, ForceMode.Force);
-        InstVFX();
+        //InstVFX();
     }
 
-    public void InstVFX()
+    /* public void InstVFX()
     {
         Instantiate(VFX1, Vector3.zero, Quaternion.identity);
-    }
+    } */
 
 
 }
