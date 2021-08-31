@@ -12,7 +12,7 @@ public enum GazeDataSource1
     GazeAPI
 }
 
-public class EyeTrackingSample : MonoBehaviour
+public class EyeTrackingSample1 : MonoBehaviour
 {
     [Header("Gaze data")]
     public GazeDataSource1 gazeDataSource1 = GazeDataSource1.InputSubsystem;
@@ -250,6 +250,11 @@ public class EyeTrackingSample : MonoBehaviour
 
             // Prefer layers or tags to identify looked objects in your application
             // This is done here using GetComponent for the sake of clarity as an example
+            EyeTest1 eyeTest1 = hit.collider.gameObject.GetComponent<EyeTest1>();
+            if (eyeTest1 != null)
+            {
+                eyeTest1.RayHit();
+            }
             RotateWithGaze rotateWithGaze = hit.collider.gameObject.GetComponent<RotateWithGaze>();
             if (rotateWithGaze != null)
             {

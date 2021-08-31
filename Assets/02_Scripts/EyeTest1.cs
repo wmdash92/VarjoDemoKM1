@@ -11,6 +11,7 @@ public class EyeTest1 : MonoBehaviour
     //public GameObject VFX1;
     Rigidbody rb;
     MeshRenderer mr;
+    public GameObject VFX1;
 
     void Start()
     {
@@ -34,14 +35,14 @@ public class EyeTest1 : MonoBehaviour
     // Rotates object hit with gaze tracking raycast
     public void RayHit()
     {
-        rb.AddTorque(Vector3.up * forceAmount * Time.deltaTime, ForceMode.Force);
-        //InstVFX();
+        // rb.AddTorque(Vector3.up * forceAmount * Time.deltaTime, ForceMode.Force);
+        InstVFX();
     }
 
-    /* public void InstVFX()
+     public void InstVFX()
     {
         Instantiate(VFX1, Vector3.zero, Quaternion.identity);
-    } */
+    } 
 
 
 }
